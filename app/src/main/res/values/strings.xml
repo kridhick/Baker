@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Baking Time!</string>
+    <string name="action_settings">Settings</string>
+    <string name="NO_DATA_FOUND">No Data Found!</string>
+    <string name="NO_NETWORK">Please try again. Trouble in connecting to network!</string>
+    <string name="title_recipedetail_list">Recipe - Ingredients and  Steps </string>
+    <string name="title_recipedetail_detail">Recipe Steps</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
+    <string name="MSG_FIST_STEP">You already are in the First step of the recipe!</string>
+    <string name="MSG_LAST_STEP">You already are in the Last step of the recipe!</string>
+</resources>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.udacity.karthikeyan.baker">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="false"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".UI.RecipeMainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar"
+            tools:ignore="InnerclassSeparator">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".UI.RecipeDetailListActivity"
+            android:label="@string/title_recipedetail_list"
+            android:parentActivityName=".UI.RecipeMainActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            tools:ignore="InnerclassSeparator">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.udacity.karthikeyan.baker.UI.RecipeMainActivity" />
+        </activity>
+        <activity
+            android:name=".UI.RecipeDetailStepsActivity"
+            android:label="@string/title_recipedetail_detail"
+            android:parentActivityName=".UI.RecipeDetailListActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            tools:ignore="InnerclassSeparator">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.udacity.karthikeyan.baker.UI.RecipeDetailListActivity" />
+        </activity>
+
+        <service android:name=".Widget.UpdateBakingService"
+            tools:ignore="InnerclassSeparator" />
+
+        <service
+            android:name=".Widget.GridWidgetService"
+            android:permission="android.permission.BIND_REMOTEVIEWS"
+            tools:ignore="InnerclassSeparator" />
+
+        <receiver android:name=".Widget.BakerAppWidget"
+            tools:ignore="InnerclassSeparator">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/baker_app_widget_info" />
+        </receiver>
+    </application>
+
+</manifest>

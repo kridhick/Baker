@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="true"
+    tools:context=".UI.RecipeMainActivity"
+    tools:style="@style/CardView"
+    tools:showIn="@layout/content_recipe_main">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:gravity="center_horizontal"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_recipe_name"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50_spacing"
+            android:gravity="center_vertical"
+            android:layout_centerInParent="false"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:layout_centerHorizontal="false"
+            android:textAlignment="center"
+            android:layout_centerVertical="false" />
+
+
+        <ImageView
+            android:id="@+id/iv_recipe"
+            android:layout_gravity="left"
+            android:paddingRight="@dimen/text_margin"
+            android:elevation="@dimen/dp_1_spacing"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>
+
+
+
+
+
+
+
